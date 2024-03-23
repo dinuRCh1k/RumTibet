@@ -1,0 +1,92 @@
+@import '../scss-utils/mixin';
+@import '../scss-utils/variables';
+
+.blog {
+    margin-top: 8rem;
+
+    .blog__title,
+    .blog__subticle {
+        text-align: center;
+    }
+
+    .blog__subticle {
+        margin-top: 0.8rem;
+    }
+
+    .blog__images {
+        margin-top: $margin-regular;
+        display: grid;
+        grid-template-columns: 58rem 28rem 28rem;
+        grid-gap: 2rem;
+
+        position: relative;
+
+        a {
+            position: relative;
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border: 0.25rem solid $clr-white;
+                border-radius: $radius-small;
+                transition: $transition-fast;
+                opacity: 0;
+                -webkit-transition: $transition-fast;
+                -moz-transition: $transition-fast;
+                -ms-transition: $transition-fast;
+                -o-transition: $transition-fast;
+                -webkit-border-radius: $radius-small;
+                -moz-border-radius: $radius-small;
+                -ms-border-radius: $radius-small;
+                -o-border-radius: $radius-small;
+            }
+
+            &:hover::after {
+                opacity: 1;
+                transform: scale(0.9);
+                -webkit-transform: scale(0.9);
+                -moz-transform: scale(0.9);
+                -ms-transform: scale(0.9);
+                -o-transform: scale(0.9);
+            }
+        }
+
+        .top {
+            display: grid;
+            grid-template-columns: 28rem 58rem 28rem;
+            grid-gap: 2rem;
+        }
+    }
+
+    .blog-btn {
+        display: block;
+
+        width: 17.8rem;
+
+        margin-top: $margin-medium;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+@media (max-width: 425px) {
+    .blog {
+        margin-top: $margin-medium;
+        .blog__title,.blog__subticle {
+            text-align: left;
+        }
+        .blog__images {
+            grid-template-columns: 28rem;
+            img {
+                height: 25rem;
+                object-fit: cover;
+            }
+            .top {
+                grid-template-columns: 28rem;
+            }
+        }
+    }
+}

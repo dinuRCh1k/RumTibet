@@ -1,0 +1,83 @@
+@import '../scss-utils/mixin';
+@import '../scss-utils/variables';
+.hero {
+    margin-top: $margin-large;
+
+    .hero__wrapper {
+        display: flex;
+        align-items: center;
+        column-gap: 12rem;
+
+        .hero__left {
+            img {
+                transition: $transition-fast;
+                -webkit-transition: $transition-fast;
+                -moz-transition: $transition-fast;
+                -ms-transition: $transition-fast;
+                -o-transition: $transition-fast;
+
+                &:hover {
+                    transform: scale(1.02);
+                    -webkit-transform: scale(1.02);
+                    -moz-transform: scale(1.02);
+                    -ms-transform: scale(1.02);
+                    -o-transform: scale(1.02);
+                }
+
+                &:active {
+                    transform: scale(0.95);
+                    -webkit-transform: scale(0.95);
+                    -moz-transform: scale(0.95);
+                    -ms-transform: scale(0.95);
+                    -o-transform: scale(0.95);
+                }
+            }
+        }
+
+        .hero__right {
+            .hero__subticle {
+                max-width: 58rem;
+
+                margin-top: 0.8rem;
+            }
+
+            .hero__text {
+                max-width: 58rem;
+
+                margin-top: $margin-regular;
+            }
+
+            .hero-btn {
+                margin-top: 4rem;
+            }
+        }
+    }
+}
+@media (max-width: 425px) {
+    .hero {
+        margin-top: $margin-medium;
+        .hero__wrapper {
+            flex-direction: column-reverse;
+            .hero__left {
+                img {
+                    display: none;
+                }
+                .none {
+                    display: block;
+                    margin-top: $margin-regular;
+                }
+            }
+            .hero__right {
+                .hero__subticle,.hero-btn {
+                    margin-top: 2.4rem;
+                }
+                .hero-btn {
+                    display: block;
+                    width: 17.6rem;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            }
+        }
+    }
+}

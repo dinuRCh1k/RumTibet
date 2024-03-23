@@ -1,0 +1,106 @@
+@import '../scss-utils/variables';
+@import '../scss-utils/mixin';
+
+.card-blog {
+    display: flex;
+    align-items: center;
+    column-gap: 2.4rem;
+    padding: 1.6rem;
+
+    transition: $transition-fast;
+    -webkit-transition: $transition-fast;
+    -moz-transition: $transition-fast;
+    -ms-transition: $transition-fast;
+    -o-transition: $transition-fast;
+
+    box-shadow: $shadow;
+
+    &:hover {
+        transform: scale(1.02);
+        -webkit-transform: scale(1.02);
+        -moz-transform: scale(1.02);
+        -ms-transform: scale(1.02);
+        -o-transform: scale(1.02);
+    }
+
+    &:active {
+        transform: scale(0.95);
+        -webkit-transform: scale(0.95);
+        -moz-transform: scale(0.95);
+        -ms-transform: scale(0.95);
+        -o-transform: scale(0.95);
+    }
+
+    img {
+        border-radius: $radius-regular;
+        -webkit-border-radius: $radius-regular;
+        -moz-border-radius: $radius-regular;
+        -ms-border-radius: $radius-regular;
+        -o-border-radius: $radius-regular;
+    }
+
+    h2 {
+        color: $clr-primary-black;
+        font-size: $font-size-x;
+        font-weight: 700;
+        line-height: 3.2rem;
+
+        max-width: 29.4rem;
+    }
+
+    p {
+        color: $clr-primary-black;
+        font-size: $font-size-s;
+        line-height: 2rem;
+
+        max-width: 29.4rem;
+        max-height: 11.6rem;
+
+        margin-top: 2.4rem;
+    }
+
+    .card-flex {
+        @include flex-row();
+        margin-top: 2.4rem;
+
+        h3 {
+            color: $clr-primary-yellow;
+            font-size: $font-size-s;
+            font-weight: 700;
+            line-height: 2rem;
+        }
+
+        a {
+            color: $clr-primary-gray;
+            font-size: $font-size-s;
+            font-weight: 700;
+            line-height: 2rem;
+            transition: $transition-fast;
+            -webkit-transition: $transition-fast;
+            -moz-transition: $transition-fast;
+            -ms-transition: $transition-fast;
+            -o-transition: $transition-fast;
+
+            &:hover {
+                color: $clr-primary-yellow;
+            }
+        }
+    }
+
+    @include respond-to('phone') {
+        flex-direction: column;
+        padding: 0;
+
+        h2,
+        p,
+        .card-flex {
+            padding-left: 1.6rem;
+            margin-top: 1.6rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+            line-height: 2.6rem;
+        }
+    }
+}

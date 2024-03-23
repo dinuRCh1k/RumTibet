@@ -1,0 +1,101 @@
+@import '../scss-utils/variables';
+@import '../scss-utils/mixin';
+.btn-small {
+    display: inline-block;
+
+    padding: 1.2rem 2.4rem;
+    background: $clr-primary-gray;
+    border-radius: $radius-small;
+    -webkit-border-radius: $radius-small;
+    -moz-border-radius: $radius-small;
+    -ms-border-radius: $radius-small;
+    -o-border-radius: $radius-small;
+    transition: $transition-fast;
+    -webkit-transition: $transition-fast;
+    -moz-transition: $transition-fast;
+    -ms-transition: $transition-fast;
+    -o-transition: $transition-fast;
+    color: $clr-primary-white;
+    font-size: $font-size-m;
+    font-weight: 600;
+    line-height: 2rem;
+    letter-spacing: 1.2%;
+
+    &:hover {
+        background: $clr-primary-yellow;
+        color: $clr-primary-gray;
+    }
+
+    &:active {
+        @include click();
+    }
+}
+
+.btn-large {
+    display: inline-block;
+
+    padding: 1.6rem 3.6rem;
+    background: $clr-primary-gray;
+    border-radius: $radius-small;
+    -webkit-border-radius: $radius-small;
+    -moz-border-radius: $radius-small;
+    -ms-border-radius: $radius-small;
+    -o-border-radius: $radius-small;
+    transition: $transition-fast;
+    -webkit-transition: $transition-fast;
+    -moz-transition: $transition-fast;
+    -ms-transition: $transition-fast;
+    -o-transition: $transition-fast;
+
+    color: $clr-primary-white;
+    font-size: $font-size-m;
+    font-weight: 600;
+    line-height: 2rem;
+    letter-spacing: 1.2%;
+
+    &:hover {
+        background: $clr-primary-yellow;
+        color: $clr-primary-gray;
+    }
+
+    &:active {
+        @include click();
+    }
+
+    @include respond-to('phone') {
+        padding: 1.2rem 2.4rem;
+        margin: 0 auto;
+    }
+}
+
+.btn-second {
+    display: inline-block;
+
+    padding: 1.2rem 2.4rem;
+    background: $clr-primary-white;
+    border: 0.1rem solid $clr-primary-gray;
+    border-radius: $radius-small;
+    -webkit-border-radius: $radius-small;
+    -moz-border-radius: $radius-small;
+    -ms-border-radius: $radius-small;
+    -o-border-radius: $radius-small;
+    transition: $transition-fast;
+    -webkit-transition: $transition-fast;
+    -moz-transition: $transition-fast;
+    -ms-transition: $transition-fast;
+    -o-transition: $transition-fast;
+
+    color: $clr-primary-gray;
+    font-size: $font-size-m;
+    font-weight: 600;
+    line-height: 2rem;
+    letter-spacing: 1.2%;
+
+    &:hover {
+        border: 0.1rem solid $clr-primary-yellow;
+    }
+
+    &:active {
+        @include click();
+    }
+}

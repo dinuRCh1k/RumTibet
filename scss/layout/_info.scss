@@ -1,0 +1,72 @@
+@import '../scss-utils/mixin';
+@import '../scss-utils/variables';
+
+.info {
+    margin-top: $margin-large;
+    background: $clr-bg-2;
+    padding: 8rem 0 $padding-large 20rem;
+
+
+    .info__title,
+    .info__subticle {
+        position: relative;
+        right: 7%;
+
+        text-align: center;
+    }
+
+    .info__subticle {
+        margin-top: 0.8rem;
+    }
+
+    .info__grid {
+        margin-top: $margin-regular;
+
+        display: grid;
+        grid-template-columns: repeat(2, 58rem);
+        column-gap: 2rem;
+        row-gap: 2.4rem;
+
+        .card-blog {
+            &:last-child {
+                p {
+                    height: 9rem;
+                }
+            }
+        }
+    }
+
+    .info-btn {
+        display: block;
+        width: 22rem;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: $margin-medium;
+    }
+}
+
+@media (max-width: 425px) {
+    .info {
+        margin-top: $margin-medium;
+        padding: $padding-medium 1.6rem $padding-medium 1.6rem;
+
+        .info__title,
+        .info__subticle {
+            margin-left: 3rem;
+        }
+
+        .info__grid {
+            grid-template-columns: 1fr;
+
+            .card-blog {
+                box-shadow: none;
+
+                .item-left {
+                    img {
+                        width: 28rem;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,30 @@
+@mixin respond-to($media) {
+    @if $media=='phone' {
+        @media (max-width: 425px) {
+            @content;
+        }
+    }
+
+    @else if $media=='laptop' {
+        @media (max-width: 1024px) {
+            @content;
+        }
+    }
+}
+
+@mixin click() {
+    position: relative;
+    top: 0.1rem;
+}
+
+@mixin flex-row($justify: space-between, $align: center) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin flex-column() {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

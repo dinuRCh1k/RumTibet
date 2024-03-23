@@ -1,0 +1,104 @@
+@import '../scss-utils/mixin';
+@import '../scss-utils/variables';
+
+.programm {
+    margin-top: $margin-large;
+
+    background: $clr-bg-2;
+    padding: 8rem 37rem $padding-large 31rem;
+
+    .programm__wrapper {
+        display: flex;
+        align-items: center;
+        column-gap: 9rem;
+
+        .programm__left {
+            .programm__subticle {
+                margin-top: 0.8rem;
+            }
+
+            .programm__text {
+                margin-top: $margin-regular;
+
+                max-width: 58rem;
+            }
+
+            .programm__top {
+                display: flex;
+                flex-direction: column;
+                row-gap: 4rem;
+
+                margin-top: 4rem;
+
+                max-width: 58rem;
+
+                .top-item {
+                    display: flex;
+                    align-items: center;
+                    column-gap: 1.6rem;
+                    transition: $transition-fast;
+                    -webkit-transition: $transition-fast;
+                    -moz-transition: $transition-fast;
+                    -ms-transition: $transition-fast;
+                    -o-transition: $transition-fast;
+
+                    &:hover {
+                        transform: scale(1.02);
+                        -webkit-transform: scale(1.02);
+                        -moz-transform: scale(1.02);
+                        -ms-transform: scale(1.02);
+                        -o-transform: scale(1.02);
+                    }
+
+                    .right {
+                        h2 {
+                            color: $clr-primary-black;
+                            font-size: $font-size-l;
+                            font-weight: 700;
+                            line-height: 2rem;
+                            letter-spacing: 1.2%;
+                        }
+
+                        p {
+                            margin-top: 0.4rem;
+
+                            color: $clr-black;
+                            font-size: $font-size-s;
+                            line-height: 2rem;
+                        }
+                    }
+                }
+            }
+
+            .programm-btn {
+                margin-top: 5rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 425px) {
+    .programm {
+        margin-top: $margin-medium;
+
+        padding: $padding-medium 1.6rem $padding-medium 1.6rem;
+        .programm__wrapper {
+            flex-direction: column;
+            .programm__left {
+                .programm__text {
+                    margin-top: 3.2rem;
+                }
+                .programm-btn {
+                    display: block;
+                    width: 21.2rem;
+                    margin-top: 3.2rem;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            }
+            .programm__right {
+                display: none;
+            }
+        }
+    }
+}
